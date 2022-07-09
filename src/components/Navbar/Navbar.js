@@ -4,7 +4,7 @@ import navbar from "../../images/navbar/logo.png";
 import { useNavigate } from "react-router-dom";
 import Button from "../../global/Button/Button";
 
-function Navbar({ showSignInButton }) {
+function Navbar({ showSignInButton, showInputField }) {
   const navigate = useNavigate();
 
   function goToSignInPage() {
@@ -20,6 +20,9 @@ function Navbar({ showSignInButton }) {
       ) : (
         <Button text="Sign In" onClicking={goToSignInPage} />
       )}
+      
+      {showInputField ? <input /> : ""}
+      
     </div>
   );
 }
