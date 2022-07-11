@@ -3,11 +3,11 @@ import HomePageContent from '../../components/HomePageContent/HomePageContent'
 import Navbar from '../../components/Navbar/Navbar'
 import "./HomePage.css"
 
-function HomePage() {
+function HomePage({ setProductId }) {
   return (
     <div>
         <Navbar showSignInButton={false} showInputField={true} /> 
-        <HomePageContent />
+        <HomePageContent setProductId={setProductId} />
     </div>
   )
 }

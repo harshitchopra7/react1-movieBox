@@ -22,7 +22,7 @@ function SignInBody({ setIsUserLoggedIn }) {
     console.log("email", email)
     console.log("password", password)
     setIsUserLoggedIn(true)
-    // navigate("/")
+    navigate("/")
   }
 
   return (
