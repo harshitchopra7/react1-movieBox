@@ -21,7 +21,7 @@ function App() {
             element={isUserLoggedIn ? <HomePage setProductId={setProductId} /> : <LandingPage />}
           />
           <Route path="/sign-in" element={<SignIn setIsUserLoggedIn={setIsUserLoggedIn} />} />
-          <Route path="/electronics/:id" element={<SingleProductPage productId={productId} />}  />
+          {/* <Route path="/electronics/:id" element={<SingleProductPage productId={productId} />}  /> */}
         </Routes>
       </div>
     </BrowserRouter>

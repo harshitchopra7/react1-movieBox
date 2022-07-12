@@ -2,20 +2,14 @@ import React from "react";
 import "./Row.css";
 import { useNavigate} from 'react-router-dom'
 
-function Row({ rowTitle, moviesArray, posterPath, setProductId }) {
-    const navigate = useNavigate();
-
-    function navigateToProductPage(id) {
-        setProductId(id)
-        navigate(`/electronics/${id}`)
-    }
+function Row({ rowTitle, moviesArray, posterPath }) {
 
   return (
     <div className="row_container">
       <p className="row_container_title">{rowTitle}</p>
       <div className="movies_row_container">
         {moviesArray.map((value, key) => (
-          <div className="movies_row" onClick={() => navigateToProductPage(key)}>
+          <div className="movies_row">
             <img
               src={
                 posterPath

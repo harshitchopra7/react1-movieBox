@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./HomePageContent.css";
 import Row from "./Row/Row";
 
-function HomePageContent({ setProductId }) {
+function HomePageContent() {
   // image path = https://image.tmdb.org/t/p/original
 
   // APIs   
@@ -43,7 +43,6 @@ function HomePageContent({ setProductId }) {
           rowTitle="Top Rated Movies"
           moviesArray={topRatedMovies}
           posterPath={true}
-          setProductId={setProductId}
         />
       )}
 
