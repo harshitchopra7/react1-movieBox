@@ -8,9 +8,9 @@ import SingleProductPage from "./components/SingleProductPage/SingleProductPage"
 
 function App() {
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
-  const [productId, setProductId] = useState(0)
+  const [productId, setProductId] = useState(0);
 
-  console.log("isUserLoggedIn", isUserLoggedIn)
+  console.log("isUserLoggedIn", isUserLoggedIn);
   // const isUserLoggedIn = true;
   return (
     <BrowserRouter>
@@ -18,9 +18,22 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={isUserLoggedIn ? <HomePage setProductId={setProductId} /> : <LandingPage />}
+            element={
+              isUserLoggedIn ? (
+                <HomePage
+                  setProductId={setProductId}
+                  isUserLoggedIn={isUserLoggedIn}
+                  setIsUserLoggedIn={setIsUserLoggedIn}
+                />
+              ) : (
+                <LandingPage />
+              )
+            }
           />
-          <Route path="/sign-in" element={<SignIn setIsUserLoggedIn={setIsUserLoggedIn} />} />
+          <Route
+            path="/sign-in"
+            element={<SignIn setIsUserLoggedIn={setIsUserLoggedIn} />}
+          />
           {/* <Route path="/electronics/:id" element={<SingleProductPage productId={productId} />}  /> */}
         </Routes>
       </div>

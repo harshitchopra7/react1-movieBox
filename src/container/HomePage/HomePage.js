@@ -1,15 +1,20 @@
-import React from 'react'
-import HomePageContent from '../../components/HomePageContent/HomePageContent'
-import Navbar from '../../components/Navbar/Navbar'
-import "./HomePage.css"
+import React from "react";
+import HomePageContent from "../../components/HomePageContent/HomePageContent";
+import Navbar from "../../components/Navbar/Navbar";
+import "./HomePage.css";
 
-function HomePage({ setProductId }) {
+function HomePage({ setProductId, isUserLoggedIn, setIsUserLoggedIn }) {
   return (
     <div>
-        <Navbar showSignInButton={false} showInputField={true} /> 
-        <HomePageContent setProductId={setProductId} />
+      <Navbar
+        showSignInButton={false}
+        showInputField={true}
+        isUserLoggedIn={isUserLoggedIn}
+        setIsUserLoggedIn={setIsUserLoggedIn}
+      />
+      <HomePageContent setProductId={setProductId} />
     </div>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;

@@ -1,4 +1,4 @@
-import firebase, { initializeApp } from "firebase/compat/app";
+import firebase from "firebase/compat/app";
 // import auth (authentication/authorization) from firebase
 import "firebase/compat/auth"
 // import firestore (database) from firebase
@@ -15,8 +15,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore()
 const auth = firebase.auth()
 
-export { auth, db, app}
+export { auth, app}
+export default db;
